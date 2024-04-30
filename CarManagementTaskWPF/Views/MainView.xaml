@@ -1,0 +1,53 @@
+﻿<Window x:Class="CarManagementTaskWPF.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        
+        Title="AppMainWindow" 
+        Height="600" Width="900" FontSize="22" >
+
+    <Grid Background="Silver">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+
+            <Label Content="Cars" VerticalAlignment="Top" HorizontalContentAlignment="Center"
+           VerticalContentAlignment="Center" FontSize="34"/>
+
+            <ListView Margin="0,20,0,0" ItemsSource="{Binding Cars}" Height="390"
+                  MouseDoubleClick="Cars_DoubleClick" Background="Beige">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="Vendor" Width="300" DisplayMemberBinding="{Binding Vendor, UpdateSourceTrigger=PropertyChanged}"/>
+                            <GridViewColumn Header="Model" Width="300" DisplayMemberBinding="{Binding Model, UpdateSourceTrigger=PropertyChanged}"/>
+                            <GridViewColumn Header="Year" Width="300" DisplayMemberBinding="{Binding Year, UpdateSourceTrigger=PropertyChanged}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+            <Button Width="200" Height="80" Margin="80,0,0,0" Content="Add New Car"
+            Background="Orange" FontSize="26" FontWeight="SemiBold" HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center" Click="AddNewCar_Button"/>
+
+            <Button Width="200" Height="80" Margin="70,0,0,0" Content="Get Cars"
+            Background="Orange" FontSize="26" FontWeight="SemiBold" HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center" Click="GetCarsFromJsonFile"/>
+
+            <Button Width="200" Height="80" Margin="70,0,0,0" Content="Save Cars"
+            Background="Orange" FontSize="26" FontWeight="SemiBold" HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center" Click="SaveCarsToJsonFile"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

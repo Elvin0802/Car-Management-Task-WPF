@@ -1,0 +1,37 @@
+[
+  {
+    "Vendor": "BMW",
+    "Model": "530",
+    "Year": "2015"
+  },
+  {
+    "Vendor": "Kia",
+    "Model": "K5",
+    "Year": "2017"
+  },
+  {
+    "Vendor": "Opel",
+    "Model": "Mokka",
+    "Year": "2023"
+  },
+  {
+    "Vendor": "Ford",
+    "Model": "F-150",
+    "Year": "2021"
+  },
+  {
+    "Vendor": "Tesla",
+    "Model": "Model S",
+    "Year": "2019"
+  },
+  {
+    "Vendor": "McLaren",
+    "Model": "720s",
+    "Year": "2022"
+  },
+  {
+    "Vendor": "Toyota",
+    "Model": "Prado",
+    "Year": "2014"
+  }
+]
